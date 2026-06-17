@@ -16,6 +16,10 @@ jobs:
             variants/general.tex
             variants/writer.tex
             variants/datadog.tex
+      - name: Smoke-test resumes
+        run: |
+          python3 -m pip install --quiet pypdf
+          python3 web/test_resumes.py
       - name: Assemble site
         run: |
           set -e
