@@ -12,8 +12,9 @@ jobs:
       - name: Compile LaTeX variants
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: "variants/*.tex"
-          glob_root_file: true
+          root_file: |
+            variants/writer.tex
+            variants/datadog.tex
       - name: Assemble site
         run: |
           set -e
