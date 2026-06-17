@@ -1,0 +1,11 @@
+% ATS-safe, single-column resume base. Standard fonts, real text, no multicol.
+\documentclass[letterpaper,11pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=1.3em,itemsep=1pt,topsep=2pt}
+\newcommand{\rsection}[1]{\par\vspace{7pt}\noindent{\large\bfseries #1}\par\vspace{1pt}\hrule\vspace{4pt}}
+\newcommand{\role}[3]{\noindent\textbf{#1} — #2 \hfill #3\par}

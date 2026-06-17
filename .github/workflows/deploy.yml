@@ -1,0 +1,36 @@
+name: Build & Deploy Resumes
+on:
+  push: { branches: [main] }
+  workflow_dispatch:
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: "pages", cancel-in-progress: true }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile LaTeX variants
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: "variants/*.tex"
+          glob_root_file: true
+      - name: Assemble site
+        run: |
+          set -e
+          mkdir -p site
+          for v in variants/*.tex; do
+            n=$(basename "$v" .tex)
+            [ -f "$n.pdf" ] && cp "$n.pdf" "site/resume-$n.pdf"
+          done
+          python3 web/gen_index.py site > site/index.html
+          cp web/style.css site/ 2>/dev/null || true
+          [ -f CNAME ] && cp CNAME site/ || true
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.dep.outputs.page_url }}" }
+    steps:
+      - id: dep
+        uses: actions/deploy-pages@v4
