@@ -3,6 +3,5 @@
   \item Instrumented the fleet with OpenTelemetry (traces, metrics, structured logs) --- including agent tool-call, token, latency, error, and trajectory telemetry --- with a live telemetry dashboard.
   \item Built \href{https://speedforge.dev}{Speedforge}: a self-hosted GitHub Actions CI-runner product (Actions Runner Controller on spot VMs) with multi-substrate testing and CI cost/reliability work.
   \item Composed a Hermes-based multi-agent fleet atop \href{https://nousresearch.com}{Nous Research's open-source Hermes} (compose, not fork), preserving upstream capabilities such as async subagents.
-  \item Per-agent OS-user + Kubernetes-namespace isolation; GitOps/IaC with OpenTofu and Argo CD; runtime controls via flagd/OpenFeature without restarts.
-  \item Keyless secrets-broker pattern (factotum/secstore-style custody, PAKE negotiation) with credentials withheld from agent workloads.
+  \item Per-agent OS-user + Kubernetes-namespace isolation; GitOps/IaC with OpenTofu and Argo CD; runtime controls via flagd/OpenFeature; keyless secrets-broker custody (PAKE) with credentials withheld from workloads.
 \end{itemize}
