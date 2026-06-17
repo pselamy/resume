@@ -1,7 +1,16 @@
-% SHARED featured-work pool. Variants choose ORDER/emphasis (agents-first for
-% Writer; observability-first for Datadog). REEVE: populate from the live fleet.
+% Shared featured-work pool. Variant-specific order is controlled by \DatadogVariant.
+\ifdefined\DatadogVariant
 \begin{itemize}
-  \item \textbf{Autonomous agent fleet (Hermes/Nous):} multi-agent orchestrator — laneq priority queue, self-healing watchdog (park + stay-busy), agent-teams parallelism, MCP/skills framework. % WRITER headline
-  \item \textbf{Observability \& telemetry:} OpenTelemetry instrumentation (traces/metrics/logs) + a live CI telemetry dashboard; agent tool-call/token/latency trajectory telemetry. % DATADOG headline
-  \item \textbf{Speedforge:} self-hosted GitHub-Actions CI-runner product (ARC on spot), multi-substrate.
+  \item \textbf{AI-codegen and agent observability:} instrumented live agent and CI workflows around traces, metrics, structured logs, tool-call trajectories, token usage, latency, errors, and completion outcomes so autonomous work can be debugged, evaluated, and improved.
+  \item \textbf{Speedforge CI telemetry:} built a self-hosted GitHub Actions runner product using Actions Runner Controller on spot VMs, multi-substrate testing, and a live telemetry dashboard for CI reliability and cost visibility.
+  \item \textbf{Self-healing agent runtime:} built a multi-agent orchestrator with SQLite priority queue, multi-consumer leases, parallel Claude workers, watchdog recovery for stalls/idling, and dispatch/fan-out patterns.
+  \item \textbf{MCP and skills framework:} developed an agent architecture split: MCP servers expose callable capabilities; skills encode reusable judgment and procedures, with privacy scanning, security audit gates, and broker-held credential boundaries.
 \end{itemize}
+\else
+\begin{itemize}
+  \item \textbf{Agent skills, MCP, and tooling:} developed a practical agent architecture split: MCP servers expose callable capabilities; skills encode reusable judgment, procedures, and operating taste; built public and internal agent-skills/MCP authoring workflows with privacy, security, and credential gates.
+  \item \textbf{Autonomous agent harnesses:} built a self-healing multi-agent orchestrator with a SQLite priority queue, multi-consumer leases, parallel Claude workers, dispatch/fan-out patterns, continuous resolve-or-decompose loops, and reliable inter-agent messaging around Claude Code paste-collapse failure modes.
+  \item \textbf{Live production-style fleet:} operates agents that perform real autonomous work across repos, CI, memory, scheduling, messaging, credentialed tools, and bounded workflows, with evals/testing, safety gates, and explicit authority boundaries.
+  \item \textbf{Infrastructure rigor:} built the fleet by composing on Nous Research's open-source Hermes, using per-agent OS-user and Kubernetes-namespace isolation, broker-held credentials, GitOps/IaC with OpenTofu and Argo CD, and runtime controls through flagd/OpenFeature.
+\end{itemize}
+\fi
