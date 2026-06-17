@@ -1,6 +1,6 @@
 \subsec{Autonomous Agent Harnesses \& Loops}
 \begin{itemize}
-  \item Self-healing multi-agent orchestrator: a SQLite priority queue, multi-consumer leases, parallel workers, and dispatch/fan-out for agent-team parallelism.
-  \item Watchdog recovery for parked and coasting agents (errors, stalls, idle-while-work-pending) that recovers or enforces stay-busy execution; reliable inter-agent messaging and continuous resolve-or-decompose loops.
-  \item Agents doing real autonomous work: credentialed document retrieval and workflow prep, risk-capped live-capital market-making, CI repair, repo changes, and long-running task decomposition.
+  \item Self-healing multi-agent orchestrator with a SQLite priority queue, multi-consumer leases, parallel workers, and dispatch/fan-out for team parallelism.
+  \item Watchdog that detects parked, stalled, and idle-while-work-pending agents and recovers them or enforces continued execution; reliable inter-agent messaging and resolve-or-decompose loops.
+  \item Agents doing real work: credentialed document retrieval and prep, risk-capped live-capital market-making, CI repair, repo changes, and long-running task decomposition.
 \end{itemize}
