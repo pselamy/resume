@@ -1,6 +1,6 @@
 \subsec{Fleet, Observability, Security \& Production Rigor}
 \begin{itemize}
-  \item Modeled each agent as a reusable Terraform module (identity, runtime, skills, schedule, secrets), so the fleet onboards, reconfigures, and rebuilds entirely as code.
+  \item Modeled each agent as a reusable Terraform module (identity, runtime, skills, schedule, secrets), so adding or reconfiguring an agent is a declarative change rather than a bespoke rebuild.
   \item Fleet instrumented with OpenTelemetry (traces, metrics, logs) including agent tool-call, token, latency, and trajectory telemetry, with a live dashboard.
   \item Built \href{https://speedforge.dev}{Speedforge}, a self-hosted GitHub Actions CI-runner product (Actions Runner Controller on spot VMs) with multi-substrate testing and cost and reliability work.
   \item Built a production multi-agent fleet on \href{https://nousresearch.com}{Nous Research's open-source Hermes}, choosing compose-over-fork so upstream improvements arrive via version bumps rather than fork maintenance.
