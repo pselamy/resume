@@ -13,6 +13,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
+            variants/general.tex
             variants/writer.tex
             variants/datadog.tex
       - name: Assemble site
