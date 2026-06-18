@@ -17,6 +17,7 @@ jobs:
             variants/writer.tex
             variants/datadog.tex
             variants/anthropic.tex
+            variants/openai.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
