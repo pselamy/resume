@@ -24,7 +24,6 @@ jobs:
         run: |
           set -e
           mkdir -p site
-          echo 'resume.selamy.dev' > site/CNAME
           for v in variants/*.tex; do
             n=$(basename "$v" .tex)
             [ -f "$n.pdf" ] && cp "$n.pdf" "site/resume-$n.pdf"
