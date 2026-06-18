@@ -22,6 +22,7 @@ jobs:
             variants/google.tex
             variants/humanize.tex
             variants/stubhub.tex
+            variants/basis.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
