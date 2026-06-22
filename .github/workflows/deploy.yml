@@ -16,6 +16,7 @@ jobs:
             variants/general.tex
             variants/writer.tex
             variants/datadog.tex
+            variants/terzo.tex
             variants/anthropic.tex
             variants/openai.tex
             variants/dioptra.tex
