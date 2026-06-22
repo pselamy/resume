@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Loss Descent — AI Agent Correctness Audit</title>
+  <style>
+    :root{--bg:#0b1020;--card:#121a2e;--ink:#eef4ff;--muted:#aab7d0;--line:#27324b;--accent:#7dd3fc;--green:#9ae6b4;--warn:#fbd38d;}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#09111f,#101827);color:var(--ink);font:15px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif} main{max-width:1100px;margin:0 auto;padding:34px 22px 48px} .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:22px;align-items:start}.card{background:rgba(18,26,46,.92);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 18px 60px rgba(0,0,0,.25)} h1{font-size:42px;line-height:1.02;margin:8px 0 14px;letter-spacing:-.04em} h2{font-size:20px;margin:0 0 12px} h3{font-size:15px;margin:18px 0 8px;color:var(--green);text-transform:uppercase;letter-spacing:.06em}.sub{font-size:19px;color:var(--muted);max-width:760px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 11px;margin:4px 6px 4px 0;color:var(--muted);background:#0c1426}.price{font-size:28px;font-weight:800;color:var(--green);margin:8px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px} ul{padding-left:19px;margin:8px 0} li{margin:6px 0} .muted{color:var(--muted)} .quote{border-left:3px solid var(--accent);padding-left:14px;color:#d9e8ff;font-size:18px}.target{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.target strong{color:#fff}.tag{font-size:12px;color:#07101b;background:var(--accent);border-radius:999px;padding:2px 8px;font-weight:800}.warm{background:var(--green)} .cold{background:var(--warn)} .draft{white-space:pre-wrap;background:#08101d;border:1px solid var(--line);border-radius:12px;padding:13px;color:#d7e5ff;font-size:13px} footer{margin-top:20px;color:var(--muted);font-size:12px} a{color:var(--accent)} @media(max-width:900px){.hero,.grid,.two{grid-template-columns:1fr} h1{font-size:34px}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Loss Descent · Services + Training, not SaaS</div>
+  <section class="hero">
+    <div>
+      <h1>I make your production AI agents release-gated.</h1>
+      <p class="sub">A two-week paid audit, setup, and training engagement for teams shipping AI agents whose correctness is currently reviewed by senior engineers by hand.</p>
+      <p class="quote">Outcome: scoped agent behavior is tied to executable acceptance criteria, regression tests, CI/release gates, and a team-owned playbook.</p>
+      <p><span class="pill">Agent correctness</span><span class="pill">Eval harnesses</span><span class="pill">CI release gates</span><span class="pill">Failure corpus</span><span class="pill">Team training</span></p>
+    </div>
+    <aside class="card">
+      <h2>Engagement shape</h2>
+      <div class="price">$18K-$35K fixed fee</div>
+      <p class="muted">Two weeks. Remote. One production-ish agent workflow. Design-partner price can be lower for warm references; regulated/high-risk scopes price higher.</p>
+      <h3>Best buyer</h3>
+      <p>CTO / Head of Eng / agent-platform lead at an AI startup where agent regressions block releases, eat senior-engineer time, or create customer trust risk.</p>
+    </aside>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Week 1 — Audit</h2>
+      <ul>
+        <li>Map agent workflow, tools, permissions, customer-visible failure modes.</li>
+        <li>Define scoped invariants: what must be true before release.</li>
+        <li>Build a failure corpus from logs, demos, transcripts, tickets, and edge cases.</li>
+        <li>Design the release-gate rubric: pass/fail/needs-human-review.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Week 2 — Gate</h2>
+      <ul>
+        <li>Turn the rubric into executable checks and regression suites.</li>
+        <li>Wire gates into CI or the team's existing deploy/release process.</li>
+        <li>Add observability hooks and a lightweight risk register.</li>
+        <li>Run a before/after release-readiness demo on the target workflow.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Training — Keep it</h2>
+      <ul>
+        <li>Two 90-minute workshops for engineers and product leads.</li>
+        <li>A written method: how to add cases, update rubrics, and avoid eval theater.</li>
+        <li>Hand-off docs: gate owner, escalation path, release checklist, next 30 days.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="two">
+    <div class="card">
+      <h2>Why Patrick</h2>
+      <ul>
+        <li><strong>Google Cloud Office of the CTO:</strong> worked on early Gemini-based software-engineering agents, SWE-bench-style eval harnesses, and planning-versus-execution metrics.</li>
+        <li><strong>Live proof-of-work:</strong> operates a six-agent fleet doing real work across repos, CI, scheduling, messaging, and credentialed tools under release gates and risk tiers.</li>
+        <li><strong>Production taste:</strong> Meta/Google product-platform background plus independent agent tooling, skills, MCP-style capabilities, telemetry, GitOps, and self-healing operations.</li>
+        <li><strong>Co-credible review path:</strong> Huguens Jean and Norman Nunley are active technical allies for deep ML, agent-runtime, local/cloud model routing, and systems design conversations.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>What the buyer gets</h2>
+      <ul>
+        <li>A scoped correctness definition for one real agent workflow.</li>
+        <li>A regression suite and release gate the team can run after Patrick leaves.</li>
+        <li>A ranked failure map: customer-risk, security-risk, trust-risk, revenue-risk.</li>
+        <li>A training package so senior engineers stop being the only release gate.</li>
+        <li>A next-step plan: expand to more workflows, hire/contract, or advisory retainer.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <h2>Five-target buyer list</h2>
+    <div class="target"><span class="tag warm">WARM</span> <strong>Huguens Jean — Momentum / Gene-Labs</strong><br><span class="muted">Intro path:</span> direct weekly Huguens/Patrick working session. <span class="muted">Why now:</span> agentic generative-media workflows need reliability, evals, and launch gates before broader customer exposure.</div>
+    <div class="target"><span class="tag warm">WARM</span> <strong>Jesse Vincent / Prime Radiant orbit — via Norman Nunley</strong><br><span class="muted">Intro path:</span> ask Norman for a technical buyer/introduction around agent runtime, sandboxing, and release gates. <span class="muted">Why now:</span> Norman's agent-sandbox/declarative-runtime discussion maps directly to Loss Descent's correctness gate.</div>
+    <div class="target"><span class="tag cold">COLD</span> <strong>Bret Taylor or Zack Chauvin — Sierra</strong><br><span class="muted">Signal:</span> LinkedIn shows Bret Taylor as Co-Founder, Sierra; Zack Chauvin as “Building Agents @ Sierra” and ex-Meta. <span class="muted">Why now:</span> customer-facing agents need regression gates before trust failures reach enterprise customers.</div>
+    <div class="target"><span class="tag cold">COLD</span> <strong>Elliot Branson / Steven Hao / Scott Wu — Cognition</strong><br><span class="muted">Signal:</span> LinkedIn shows Elliot Branson as CTO of Federal, Cognition AI; Steven Hao as Co-Founder; Scott Wu as Cognition. <span class="muted">Why now:</span> coding agents have obvious release-gating and correctness-risk pain.</div>
+    <div class="target"><span class="tag cold">COLD</span> <strong>Dennis Cui — Decagon</strong><br><span class="muted">Signal:</span> LinkedIn shows Dennis Cui as VP of Eng @ Decagon and ex-CTO @ Cobalt. <span class="muted">Why now:</span> enterprise AI agents need repeatable correctness gates across customer deployments.</div>
+  </section>
+
+  <section class="two">
+    <div class="card">
+      <h2>Warm ask drafts</h2>
+      <h3>To Huguens</h3>
+      <div class="draft">Huguens, quick ask: I am packaging the agent-release-gating work I have been using on my own fleet into a two-week services/training engagement called Loss Descent. The pitch is: I make your production AI agents release-gated, with failure cases, evals, CI gates, and a handoff playbook.
+
+Would Momentum/Gene-Labs be a useful first design partner for this, or is there another team you think has sharper pain around agent correctness?</div>
+      <h3>To Norman</h3>
+      <div class="draft">Norman, I turned our agent-runtime / oracle-grader / sandboxing conversations into a small services offer: a two-week agent-correctness and release-gating audit called Loss Descent.
+
+Do you know one technical buyer in the Prime Radiant / Jesse Vincent / agent-sandbox orbit who is shipping agents and would understand the pain? I am looking for a design partner or paid audit, not a broad intro blast.</div>
+    </div>
+    <div class="card">
+      <h2>Cold opener</h2>
+      <div class="draft">Subject: Release gates for production agents
+
+Hi {{name}},
+
+I am Patrick Selamy, formerly Meta and Google Cloud Office of the CTO. I worked on early Gemini-based SWE-agent/eval-harness work, and I now run a live multi-agent fleet that gates releases with failure cases, evals, CI checks, and human-review thresholds.
+
+I am offering a focused two-week engagement called Loss Descent: I take one production agent workflow, map the failure modes, turn them into executable release gates, wire them into your release process, and train the team to keep extending the gate.
+
+If agent regressions or manual correctness review are costing senior-engineer time, I would be glad to compare notes. Worth a 20-minute technical calibration?</div>
+    </div>
+  </section>
+
+  <footer>
+    Source lineage: Patrick-supplied Loss Descent strategy prompt; internal career notes on Google Cloud Office of the CTO agent/eval work, live six-agent fleet, Huguens Jean, Norman Nunley, and Patrick + Norman + Huguens alliance; LinkedIn search results for target names/titles. This is a send-ready draft package, not evidence that any outreach has been sent.
+  </footer>
+</main>
+</body>
+</html>
