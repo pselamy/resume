@@ -30,6 +30,18 @@ jobs:
             variants/exacare.tex
             variants/elise.tex
             variants/frontier-labs.tex
+            variants/openai-fde.tex
+            variants/anthropic-devprod-cicd.tex
+            variants/cursor-agent-harness.tex
+            variants/vercel-ai-gateway.tex
+            variants/openai-agent-infra.tex
+            variants/github-ai-enablement.tex
+            variants/google-platform-infra.tex
+            variants/figma-ai-product.tex
+            variants/anthropic-computer-use.tex
+            variants/reddit-genai-platform.tex
+            variants/nvidia-ai-inference.tex
+            variants/bloomberg-ai-assistant.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
