@@ -48,6 +48,11 @@ jobs:
             variants/alterion-fde.tex
             variants/honk-fullstack.tex
             variants/headway.tex
+            variants/wealth-ai-infra-platform.tex
+            variants/browserbase-core-infra.tex
+            variants/poetic-fde.tex
+            variants/netic-product-infra.tex
+            variants/whop-engineering.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
