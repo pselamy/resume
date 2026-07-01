@@ -45,6 +45,8 @@ jobs:
             variants/outer-signal.tex
             variants/monstro.tex
             variants/american-express-agentic-ai.tex
+            variants/alterion-fde.tex
+            variants/honk-fullstack.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
