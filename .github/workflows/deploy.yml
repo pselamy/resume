@@ -55,6 +55,7 @@ jobs:
             variants/whop-engineering.tex
             variants/vts-activate.tex
             variants/standard-bots-platform-infra.tex
+            variants/vertical-ai-supply.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
