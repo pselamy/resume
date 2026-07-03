@@ -29,6 +29,7 @@ jobs:
             variants/basis.tex
             variants/exacare.tex
             variants/elise.tex
+            variants/ellis.tex
             variants/frontier-labs.tex
             variants/openai-fde.tex
             variants/anthropic-devprod-cicd.tex
