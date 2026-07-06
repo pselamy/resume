@@ -58,6 +58,7 @@ jobs:
             variants/standard-bots-platform-infra.tex
             variants/vertical-ai-supply.tex
             variants/paces-ai-engineer.tex
+            variants/goldman-agent-deployment.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf

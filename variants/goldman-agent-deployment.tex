@@ -1,0 +1,23 @@
+\input{preamble}
+\begin{document}
+\input{sections/header}
+\titleline{VP Developer Experience \textbar{} Agent Deployment Engineering, MCP Tooling, and Guardrailed AI Platforms}
+\rsection{Summary}
+Senior software engineer focused on deploying agentic AI systems into real engineering workflows: MCP-style tool servers, secure runtime boundaries, evaluation harnesses, observability, CI gates, and developer experience for AI-assisted software delivery. Former Meta and Google engineer who built one of the first Gemini-based software-engineering agents at Google Cloud Office of the CTO, including SWE-bench-style eval harnesses and planning-versus-execution metrics. Runs a live autonomous-agent fleet with credentialed tools, reusable skills, human-review thresholds, and production-style monitoring across repos, CI repair, scheduling, documents, and messaging.
+\rsection{Selected Agent Deployment Engineering Portfolio}
+\subsec{Agent Runtime, MCP Tooling \& Guardrails}
+\begin{itemize}
+  \item Built a multi-agent operating model where MCP-style servers expose callable capabilities, skills encode reusable procedures, and broker-held credentials keep high-risk actions behind explicit approval gates.
+  \item Designed guardrailed orchestration loops for long-running engineering tasks, including dispatch/fan-out workflows, tool contracts, recovery behavior, and human-in-the-loop thresholds for external actions.
+  \item Implemented CI-backed verification for autonomous coding work, including SWE-bench-style harnesses, planning-versus-execution metrics, and tests that separate runnable artifacts from plausible summaries.
+\end{itemize}
+\subsec{Developer Experience, Observability \& Enterprise Fit}
+\begin{itemize}
+  \item Instrumented agent workflows with OpenTelemetry-style traces, logs, and metrics across tool calls, latency, cost, retries, and task outcomes so operators can debug agent behavior rather than trust black-box output.
+  \item Built internal platform and product systems across Google Cloud Office of the CTO, Google Internal IAM, Citi, Lumeris, and Meta Marketplace, including secure APIs, workflow systems, ranking/ML-backed product improvements, and enterprise identity surfaces.
+  \item Developed customer-facing and internal developer tooling where reliability, auditability, permissions, and clear failure modes mattered more than demo-only automation.
+\end{itemize}
+\input{sections/experience}
+\input{sections/publicwork}
+\input{sections/skills}
+\end{document}
