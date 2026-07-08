@@ -65,6 +65,7 @@ jobs:
             variants/kforce-private-markets-ai.tex
             variants/pumpfun-backend.tex
             variants/stackadapt-user-profile.tex
+            variants/assured-guaranty-ai-software-engineer.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
