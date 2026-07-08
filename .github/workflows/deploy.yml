@@ -58,6 +58,7 @@ jobs:
             variants/tribe-ai-fde.tex
             variants/standard-bots-platform-infra.tex
             variants/vertical-ai-supply.tex
+            variants/bluefish-ai.tex
             variants/paces-ai-engineer.tex
             variants/goldman-agent-deployment.tex
             variants/quilr-network-proxy.tex
