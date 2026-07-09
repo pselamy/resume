@@ -66,6 +66,7 @@ jobs:
             variants/pumpfun-backend.tex
             variants/stackadapt-user-profile.tex
             variants/stackadapt-agentic-orchestration.tex
+            variants/alpaca-health.tex
             variants/assured-guaranty-ai-software-engineer.tex
             variants/deshaw-genai-product-development.tex
             variants/deshaw-appeng-infrastructure.tex
