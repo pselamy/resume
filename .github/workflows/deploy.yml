@@ -67,6 +67,10 @@ jobs:
             variants/stackadapt-user-profile.tex
             variants/stackadapt-agentic-orchestration.tex
             variants/assured-guaranty-ai-software-engineer.tex
+            variants/deshaw-genai-product-development.tex
+            variants/deshaw-appeng-infrastructure.tex
+            variants/optiver-ai-developer-platform.tex
+            variants/pdt-senior-platform.tex
       - name: Smoke-test resumes
         run: |
           python3 -m pip install --quiet pypdf
