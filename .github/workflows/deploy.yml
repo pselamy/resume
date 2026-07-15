@@ -69,6 +69,7 @@ jobs:
             variants/alpaca-health.tex
             variants/eagle-aec-mts.tex
             variants/assured-guaranty-ai-software-engineer.tex
+            variants/attention-tech-lead-full-stack.tex
             variants/deshaw-genai-product-development.tex
             variants/deshaw-appeng-infrastructure.tex
             variants/optiver-ai-developer-platform.tex
