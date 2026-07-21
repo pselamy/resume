@@ -63,6 +63,7 @@ jobs:
             variants/goldman-agent-deployment.tex
             variants/quilr-network-proxy.tex
             variants/kforce-private-markets-ai.tex
+            variants/hudson-bay-ai-engineer.tex
             variants/pumpfun-backend.tex
             variants/stackadapt-user-profile.tex
             variants/stackadapt-agentic-orchestration.tex
