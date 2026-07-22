@@ -1,14 +1,11 @@
 \input{preamble}
-\usepackage{fontspec}
-\setmainfont{LiberationSerif-Regular.ttf}[
-  Path=/usr/share/fonts/truetype/liberation/,
-  Ligatures=NoCommon,
-  Kerning=Off,
-  BoldFont=LiberationSerif-Bold.ttf,
-  ItalicFont=LiberationSerif-Italic.ttf,
-  BoldItalicFont=LiberationSerif-BoldItalic.ttf
-]
-\ifdefined\XeTeXgenerateactualtext\XeTeXgenerateactualtext=1\fi
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+  \usepackage{microtype}
+  \DisableLigatures{encoding = *, family = *}
+\fi
 % ATS/plain-text guardrails for this review variant.
 \setlist[itemize]{label=-,leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt}
 \hyphenpenalty=10000
