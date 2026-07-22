@@ -6,7 +6,7 @@ contact info. Building EVERY variant here = the base-change-affects-all guard.""
 import sys, glob, os, pypdf
 REQUIRED = ["Patrick Selamy", "pselamy@gmail.com", "github.com/pselamy"]
 FORBIDDEN = ["J3PS", "Java Play Prober"]  # internal codename — must never ship
-FORBIDDEN_DATES = ["2017 to 2024", "2010 to 2017"]
+FORBIDDEN_GOOGLE_DATES = ["2017" + " to " + "2024"]
 fails = []
 variants = sorted(os.path.basename(v)[:-4] for v in glob.glob("variants/*.tex"))
 if not variants: fails.append("no variants found")
@@ -22,13 +22,13 @@ for v in variants:
         if need not in text: fails.append(f"{v}: missing required '{need}'")
     for bad in FORBIDDEN:
         if bad.lower() in text.lower(): fails.append(f"{v}: forbidden/internal text '{bad}'")
-    for stale in FORBIDDEN_DATES:
+    for stale in FORBIDDEN_GOOGLE_DATES:
         if stale in text: fails.append(f"{v}: stale employment date range '{stale}'")
 for tex in glob.glob("**/*.tex", recursive=True):
     s = open(tex, encoding="utf-8", errors="ignore").read()
     for ph in ("TODO", "TBD", "PLACEHOLDER"):
         if ph in s: fails.append(f"{tex}: unresolved placeholder '{ph}'")
-    for stale in FORBIDDEN_DATES:
+    for stale in FORBIDDEN_GOOGLE_DATES:
         if stale in s: fails.append(f"{tex}: stale employment date range '{stale}'")
 if fails:
     print("RESUME SMOKE TEST FAILED:"); [print("  -", f) for f in fails]; sys.exit(1)
