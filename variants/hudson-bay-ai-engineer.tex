@@ -1,23 +1,69 @@
 \input{preamble}
+\usepackage{fontspec}
+\setmainfont{LiberationSerif-Regular.ttf}[
+  Path=/usr/share/fonts/truetype/liberation/,
+  Ligatures=NoCommon,
+  Kerning=Off,
+  BoldFont=LiberationSerif-Bold.ttf,
+  ItalicFont=LiberationSerif-Italic.ttf,
+  BoldItalicFont=LiberationSerif-BoldItalic.ttf
+]
+\ifdefined\XeTeXgenerateactualtext\XeTeXgenerateactualtext=1\fi
+% ATS/plain-text guardrails for this review variant.
+\setlist[itemize]{label=-,leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\sloppy
 \begin{document}
-\input{sections/header}
-\titleline{VP, AI Engineer \textbar{} Agentic AI Platforms, Internal AI Products, and Investment Research Systems}
+{\Huge\bfseries Patrick Selamy}\par\vspace{3pt}
+{\small New York, NY \textbar{} (210)~704-7370 \textbar{} \href{mailto:pselamy@gmail.com}{pselamy@gmail.com} \textbar{} \href{https://selamy.dev}{selamy.dev}}\par
+{\small \href{https://www.linkedin.com/in/patrickselamy}{linkedin.com/in/patrickselamy} \textbar{} \href{https://github.com/pselamy}{github.com/pselamy}}\par
+\titleline{Senior Software Engineer \textbar{} Applied AI Platforms, Agent Workflows, Enterprise AI Evaluation}
+
 \rsection{Summary}
-Senior software engineer focused on production AI systems, agentic platforms, internal AI products, retrieval, evaluation harnesses, and observable backend services for high-trust enterprise environments. Former Meta and Google engineer with Google Cloud Office of the CTO experience building early Gemini-based software-engineering agents, SWE-bench-style evaluation, planning-vs-execution metrics, and vector-search benchmarks. Builds pragmatic AI platforms that connect models, tools, data, and product workflows with clear guardrails, production telemetry, and measurable business outcomes.
-\rsection{Selected Hudson Bay Capital Fit}
-\subsec{Agentic AI Platforms \& Internal AI Products}
+Senior software engineer focused on AI prototyping, evaluation, agent workflows, and backend/platform systems for high-trust environments. Former Meta Software Engineer (E5) and Google engineer promoted from L3 to L4, selected into the 12-engineer Google Cloud Office of the CTO Applied Innovation Factory. Builds pragmatic systems that connect models, tools, retrieval, data, approvals, telemetry, and product workflows with measurable outcomes.
+
+\rsection{Experience}
+\role{Meta}{Software Engineer (E5), Marketplace and Dating}{New York, NY \textbar{} 2025 to May 2026}
 \begin{itemize}
-  \item Built Gemini-based software-engineering agents in Google Cloud Office of the CTO, including tool-use loops, SWE-bench-style evaluation, planning-vs-execution measurement, and vector-search benchmarking across ScaNN, FAISS, and pgvector.
-  \item Runs a live autonomous-agent fleet with MCP-style callable tools, reusable skills, scheduled jobs, document operations, messaging workflows, human approval gates, credential boundaries, and CI-backed verification.
-  \item Designs AI systems around real internal workflows: context gathering, tool contracts, retrieval, structured outputs, safe execution boundaries, failure recovery, and measurable task outcomes rather than demo-only chat surfaces.
+  \item Served as a Software Engineer (E5) across Marketplace and Dating product areas.
+  \item Expanded Facebook Marketplace third-party partner APIs and shipped-listing workflows, replacing partner workarounds with cleaner API paths for seller-facing commerce.
+  \item Owned the ML-assisted shipped-listing flow that removed manual item-weight entry; evaluated predictions against user-entered weights and carrier actuals, used shadow-mode validation before rollout, and delivered a positive launch/business outcome for Marketplace listings.
 \end{itemize}
-\subsec{Financial, Research \& High-Trust Platform Fit}
+
+\role{Google}{Software Engineer, promoted L3 to L4}{Pittsburgh / Austin / Remote / Atlanta \textbar{} 2017 to 2024}
 \begin{itemize}
-  \item Built backend, platform, cloud, and regulated systems across Citi, Google, Meta, ClearDATA, and Lumeris, with emphasis on privacy, access control, reliability, maintainable APIs, and production tradeoffs.
-  \item Shipped an ML-assisted Meta Marketplace listing flow that removed manual item-weight entry, met launch-quality accuracy near 80\%, and lifted new shipped-listing creation about 8\% through shadow-mode validation and staged rollout.
-  \item Built a Python public-work artifact for investment-research-adjacent signal discovery that flags suspicious wallet activity on Polymarket prediction markets, complementing broader agentic AI and platform systems work.
+  \item Promoted from L3 to L4 while moving across Google Shopping Engineering Productivity, Internal Identity and Access Management / Insider Risk, Google Cloud Office of the CTO, and Google Play.
+  \item Selected into the Google Cloud Office of the CTO Applied Innovation Factory, a 12-engineer rapid-prototyping group assembled from across Google and external hires to build prototypes for senior Google Cloud executives before larger funding or staffing decisions.
+  \item Built early Gemini-based software-engineering agent prototypes with planner/executor loops, repository context retrieval, SWE-bench-style eval harnesses, planning-vs-execution metrics, target-file precision/recall/F1, test-pass measurement, and vector-search benchmarks comparing ScaNN, \mbox{FAISS}, and pgvector.
+  \item In Google Play, helped build \href{https://support.google.com/googleplay/answer/16561562}{Play Games Leagues} from the ground up on a five-engineer team, designed a same-day opt-in smoke-test framework for third-party Play developer APIs, and contributed to AI for Accessibility scanning for app accessibility gaps.
+  \item Built Insider Risk systems for internal security and enterprise identity, including ownership reassignment for former-employee Google Drive content and visibility reduction for overly broad document sharing.
 \end{itemize}
-\input{sections/experience}
-\input{sections/publicwork}
-\input{sections/skills}
+
+\role{Earlier}{Backend / Platform / Healthcare Engineering}{Citi, Lumeris, ClearDATA, and others \textbar{} 2010 to 2017}
+\begin{itemize}
+  \item At Citi, progressed from helpdesk and application deployment into technical-specialist ownership of Cards knowledge management systems, including integration work with Oracle knowledge-management tooling for a major enterprise modernization.
+  \item Built backend, platform, cloud, and healthcare systems in Python and Java across APIs, data workflows, and regulated environments, including ClearDATA cloud-security abstractions and Lumeris predictive-analytics healthcare tooling.
+\end{itemize}
+
+\newpage
+\rsection{Selected Systems \& Public Work}
+\begin{itemize}
+  \item Personal agent platform: built and operates a personal agent workflow system with memory-backed context, MCP-style tool routing, reusable skills, scheduled jobs, messaging/document workflows, human approval gates, credential boundaries, CI-backed verification, and specialized lanes.
+  \item \href{https://github.com/selamy-labs/agent-skills}{Public agent-skills}: reusable agent procedures, skill authoring patterns, and an MCP-vs-skills framework for separating callable capabilities from reusable judgment.
+  \item \href{https://github.com/pselamy/operating-agent-fleets}{Operating Agent Fleets}: field guide for durable agent systems, planner/executor separation, memory discipline, tool routing, evidence gates, and bounded authority.
+  \item \href{https://github.com/pselamy/polymarket-insider-tracker}{polymarket-insider-tracker}: public-data market-surveillance research tool that flags anomalous wallet activity on Polymarket prediction markets.
+  \item AI instructor and speaker: led an \href{https://www.ayiti.ai/en/training}{Ayiti AI} bootcamp session on MCP, AI-assisted coding, and deployment, and \href{https://www.linkedin.com/posts/patrickselamy_ai-publicpolicy-leadership-activity-7423430343493505025-nuPe}{addressed lawmakers on AI policy} at the NHAEON National Leadership Summit.
+\end{itemize}
+
+\rsection{Technical Skills}
+\begin{itemize}[leftmargin=0em,label={},itemsep=1pt,topsep=2pt]
+  \item \textbf{Languages:} Python, Java, Kotlin, JavaScript/TypeScript, Hack, Bash, SQL
+  \item \textbf{AI / Agent Systems:} agent workflows, MCP-style tools, tool calling, evaluation harnesses, context engineering, RAG, retrieval benchmarks, structured outputs, secure tool execution
+  \item \textbf{Backend \& Product Systems:} API design, backend platforms, distributed systems, workflow orchestration, product metrics, experimentation, developer infrastructure
+  \item \textbf{Security \& Enterprise:} internal IAM, auth boundaries, insider-risk systems, credential boundaries, privacy/security review gates, trust-sensitive workflows
+  \item \textbf{Infrastructure:} Kubernetes, OpenTofu/Terraform, Argo CD, Docker, Linux, GitHub Actions, CI/CD, observability
+  \item \textbf{Data \& Cloud:} PostgreSQL, Redis, Kafka, Google Cloud, AWS
+\end{itemize}
 \end{document}
