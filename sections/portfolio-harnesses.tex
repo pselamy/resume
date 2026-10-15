@@ -1,4 +1,4 @@
-\subsec{Autonomous Agent Harnesses \& Loops}
+\subsec{Independent Agent Harnesses \& Loops}
 \begin{itemize}
   \item Self-healing orchestrator coordinating six always-on agents through a SQLite priority queue, with multi-consumer leases, parallel workers, and dispatch/fan-out for team parallelism; tens of thousands of tasks executed over months of continuous operation.
   \item Watchdog that detects parked, stalled, and idle-while-work-pending agents and recovers them or enforces continued execution; reliable inter-agent messaging and resolve-or-decompose loops.
